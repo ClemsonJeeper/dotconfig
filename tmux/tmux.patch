@@ -1,0 +1,27 @@
+diff --git a/plugins/tmux-themepack/powerline/block/cyan.tmuxtheme b/powerline/block/cyan.tmuxtheme
+index 0c5ec9a..c1a5ff1 100644
+--- a/plugins/tmux-themepack/powerline/block/cyan.tmuxtheme
++++ b/plugins/tmux-themepack/powerline/block/cyan.tmuxtheme
+@@ -100,7 +100,8 @@ set -goqF @theme-pane-border-fg "#{@powerline-color-grey-3}"
+ set -goqF @theme-status-bg "#{@powerline-status-bg}"
+ set -goqF @theme-status-fg "#{@powerline-status-fg}"
+ set -goq  @theme-status-interval 1
+-set -goq  @theme-status-justify centre
++# set -goq  @theme-status-justify centre
++set -goq  @theme-status-justify left
+ set -goqF @theme-status-left "#[fg=#{@powerline-status-left-area-left-fg},bg=#{@powerline-status-left-area-left-bg},bold] #{@themepack-status-left-area-left-format} #[fg=#{@powerline-status-left-area-left-bg},bg=#{@powerline-status-left-area-middle-bg},nobold]#[fg=#{@powerline-status-left-area-middle-fg},bg=#{@powerline-status-left-area-middle-bg}] #{@themepack-status-left-area-middle-format} #[fg=#{@powerline-status-left-area-middle-bg},bg=#{@powerline-status-left-area-right-bg}]#[fg=#{@powerline-status-left-area-right-fg},bg=#{@powerline-status-left-area-right-bg}] #{@themepack-status-left-area-right-format} #[fg=#{@powerline-status-left-area-right-bg},bg=#{@theme-status-bg},nobold]"
+ set -goqF @theme-status-left-bg "#{@powerline-status-left-bg}"
+ set -goqF @theme-status-left-fg "#{@powerline-status-left-fg}"
+@@ -140,9 +141,9 @@ set -gF  message-command-style "fg=#{@theme-message-command-fg},bg=#{@theme-mess
+ set -gF  message-style "fg=#{@theme-message-fg},bg=#{@theme-message-bg}"
+ set -gF  status-interval "#{@theme-status-interval}"
+ set -gF  status-justify "#{@theme-status-justify}"
+-set -gF  status-left "#{@theme-status-left}"
+-set -gF  status-left-length "#{@theme-status-left-length}"
+-set -gF  status-left-style "fg=#{@theme-status-left-fg},bg=#{@theme-status-left-bg}"
++# set -gF  status-left "#{@theme-status-left}"
++# set -gF  status-left-length "#{@theme-status-left-length}"
++# set -gF  status-left-style "fg=#{@theme-status-left-fg},bg=#{@theme-status-left-bg}"
+ set -gF  status-right "#{@theme-status-right}"
+ set -gF  status-right-length "#{@theme-status-right-length}"
+ set -gF  status-right-style "fg=#{@theme-status-right-fg},bg=#{@theme-status-right-bg}"
