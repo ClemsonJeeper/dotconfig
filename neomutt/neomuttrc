@@ -969,6 +969,6 @@ macro index,pager ,@( "<enter-command> set sidebar_visible=yes; macro index,page
 macro index,pager  \` ,@) 'Toggle sidebar'      # toggle the sidebar
 
 #source plugins/neomutt-powerline-nerdfonts/colors/gruvbox-powerline.neomuttrc
-#source plugins/neomutt-powerline-nerdfonts/powerline.neomuttrc
+source plugins/neomutt-powerline-nerdfonts/powerline.neomuttrc
 
 ######################## end of file ######################################
