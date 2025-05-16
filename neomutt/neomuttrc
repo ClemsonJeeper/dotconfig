@@ -19,7 +19,7 @@ unhook *		# remove all hooks
 unset allow_8bit	# use QP or Base64 if unset.
 set allow_ansi		# allow ANSI color codes in messages.
 unset arrow_cursor	# "->" as cursor (faster on slow networks).
-set ascii_chars	# Use ASCII chars for threading arrows.
+#set ascii_chars	# Use ASCII chars for threading arrows.
 unset askbcc		# ask to fill out Bcc on mesg-send?
 unset askcc		# ask to fill out CC on mesg-send?
 set attach_split	# handle every single attachment instead of concat
@@ -321,7 +321,7 @@ set forward_format="(fwd) %s"
 			# subject of forwarded mails
 
 #set index_format="%Z %[!%b %d]  %-15.15n (%?M?C%3M&%4l?) %s"
-set index_format="%Z %[!%b %d] | %-22.21n | %s"
+set index_format="%Z %[!%b %d] │ %-22.21n │ %s"
 			# message line in the index
 			# don't use locales here, because it's not needed and
 			# it runs in a memory leak in Linux libc5
@@ -946,6 +946,7 @@ macro index + "<modify-labels>!todo<enter>" "Toggle TODO"
 # sidebar
 set sidebar_width   = 25
 set sidebar_visible = yes               # set to "no" to disable sidebar view at startup
+set sidebar_divider_char = '║'
 color sidebar_new yellow default
 
 #set use_threads=threads sort=last-date sort_aux=date
