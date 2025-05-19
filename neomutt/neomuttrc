@@ -896,36 +896,40 @@ source ~/.mutt/aliases			# and include all existing aliases
 #set &charset ?charset
 
 # notmuch settings
-#set nm_default_uri="notmuch:///b/rjohnst/Maildir" # path to the maildir
-set virtual_spoolfile=no
+set nm_default_uri="notmuch:///b/rjohnst/Maildir" # path to the maildir
+set virtual_spoolfile=yes
 #set sendmail="/PATH/TO/bin/nm_sendmail"            # enables parsing of outgoing mail
 #mailboxes ! =ui-hackers =software-ui =inbox =mnos =python-hackers =script-hackers =security-hackers
 
-virtual-mailboxes \
-    "INBOX"     =inbox \
-    "Important"   "notmuch://?query=tag:starred" \
-    "ui-hackers" =ui-hackers \
-    "software-ui" =software-ui \
-    "jira" =jira \
-    "python-hackers" =python-hackers \
-    "script-hackers" =script-hackers \
-    "security-hackers" =security-hackers \
-    "TODO"      "notmuch://?query=tag:todo" \
-    "Sent"      =sent-mail \
-    "NMINBOX"     "notmuch://?query=tag:inbox and NOT tag:archive" \
-
 # virtual-mailboxes \
-#    "INBOX"     "notmuch://?query=tag:inbox and NOT tag:archive" \
-#    "Unread"    "notmuch://?query=tag:unread" \
-#    "Important"   "notmuch://?query=tag:starred" \
-#    "ui-hackers" "notmuch://?query=tag:ui-hackers" \
-#    "software-ui" "notmuch://?query=tag:software-ui" \
-#    "mnos" "notmuch://?query=tag:mnos" \
-#    "python-hackers" "notmuch://?query=tag:python-hackers" \
-#    "script-hackers" "notmuch://?query=tag:script-hackers" \
-#    "security-hackers" "notmuch://?query=tag:security-hackers" \
-#    "TODO"      "notmuch://?query=tag:todo" \
-#    "Sent"      "notmuch://?query=tag:sent"
+#     "INBOX"     =inbox \
+#     "Important"   "notmuch://?query=tag:starred" \
+#     "ui-hackers" =ui-hackers \
+#     "software-ui" =software-ui \
+#     "jira" =jira \
+#     "python-hackers" =python-hackers \
+#     "script-hackers" =script-hackers \
+#     "security-hackers" =security-hackers \
+#     "TODO"      "notmuch://?query=tag:todo" \
+#     "Sent"      =sent-mail \
+#     "NMINBOX"     "notmuch://?query=tag:inbox and NOT tag:archive" \
+#
+
+virtual-mailboxes \
+   "INBOX"     "notmuch://?query=tag:inbox and NOT tag:archive" \
+   "Unread"    "notmuch://?query=tag:unread" \
+   "Important"   "notmuch://?query=tag:starred" \
+   "Archive"   "notmuch://?query=tag:archive" \
+   "ui-hackers" "notmuch://?query=tag:ui-hackers" \
+   "software-ui" "notmuch://?query=tag:software-ui" \
+   "2024" "notmuch://?query=date:2024" \
+   "2023" "notmuch://?query=date:2023" \
+   "2022" "notmuch://?query=date:2022" \
+   "python-hackers" "notmuch://?query=tag:python-hackers" \
+   "script-hackers" "notmuch://?query=tag:script-hackers" \
+   "security-hackers" "notmuch://?query=tag:security-hackers" \
+   "TODO"      "notmuch://?query=tag:todo" \
+   "Sent"      "notmuch://?query=tag:sent"
 
 # colors
 
@@ -944,13 +948,13 @@ macro index - "<flag-message>"
 macro index + "<modify-labels>!todo<enter>" "Toggle TODO"
 
 # sidebar
-set sidebar_width   = 25
+set sidebar_width   = 30
 set sidebar_visible = yes               # set to "no" to disable sidebar view at startup
 set sidebar_divider_char = '║'
 color sidebar_new yellow default
 
 #set use_threads=threads sort=last-date sort_aux=date
-set sidebar_format = "%D%?F? [%F]?%* %?N?%N/?%S"
+set sidebar_format = "%D%?N?   %N?%?F?  %F?%* %S"
 #set sidebar_format = "%D"
 #set sidebar_format = "%B"
 set mail_check_stats = yes

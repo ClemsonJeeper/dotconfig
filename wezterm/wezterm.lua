@@ -11,7 +11,7 @@ local is_windows = function()
     return wezterm.target_triple:find("windows") ~= nil
 end
 
-config.selection_word_boundary = ' \\()"\':;<>~!#$%^&*|+=[]{}~?│'
+config.selection_word_boundary = ' \\()"\':;<>~!#$%^&*|+=[]{}~?│`'
 
 if is_windows() then
     config.default_domain = 'WSL:Ubuntu-24.04'
