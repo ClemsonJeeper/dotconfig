@@ -23,6 +23,8 @@ color index color223 color234 ~N
 # http://www.mutt.org/doc/manual/#patterns
 # https://neomutt.org/feature/index-color
 
+color attachment bold black black
+
 # from me, not tagged, not deleted
 color index_subject color109 color234 "~P !~T !~D"
 color index_author color109 color234 "~P !~T !~D"

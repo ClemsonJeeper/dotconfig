@@ -922,6 +922,7 @@ virtual-mailboxes \
    "Archive"   "notmuch://?query=tag:archive" \
    "ui-hackers" "notmuch://?query=tag:ui-hackers" \
    "software-ui" "notmuch://?query=tag:software-ui" \
+   "jira" "notmuch://?query=tag:jira" \
    "2024" "notmuch://?query=date:2024" \
    "2023" "notmuch://?query=date:2023" \
    "2022" "notmuch://?query=date:2022" \
@@ -966,6 +967,9 @@ bind index <right> sidebar-next         # got to next folder in sidebar
 bind index <space> sidebar-open         # open selected folder from sidebar
 
 bind index i noop
+
+bind attach n next-entry
+bind attach p previous-entry
 
 # sidebar toggle
 macro index,pager ,@) "<enter-command> set sidebar_visible=no; macro index,pager \\\` ,@( 'Toggle sidebar'<Enter>"
