@@ -1,4 +1,4 @@
 return {
-    "ntpeters/vim-better-whitespace",
-    lazy = false,
+  "ntpeters/vim-better-whitespace",
+  event = { "BufReadPre", "BufReadPost", "BufNewFile" },
 }

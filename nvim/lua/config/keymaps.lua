@@ -4,7 +4,6 @@ mapkey("-", "<cmd>Oil --float<CR>", "n", { desc="Open Directory in Oil" })
 
 -- Various
 mapkey("<F5>", "CopilotChatToggle<CR>", "n");
-mapkey("<F6>", "IBLToggle<CR>:se list!", "n")
 mapkey("<leader>/", "nohlsearch", "n")
 
 -- Whitespace
@@ -73,3 +72,14 @@ local api = vim.api
 -- Commenting
 api.nvim_set_keymap("n", "<C-c>", "gtc", { noremap = false })
 api.nvim_set_keymap("v", "<C-c>", "goc", { noremap = false })
+
+-- Toggle mouse mode
+vim.keymap.set("n", "<leader>m", function()
+  if vim.o.mouse == "" then
+    vim.opt.mouse = "nvi"
+    vim.notify("Mouse mode enabled: nvi", vim.log.levels.INFO)
+  else
+    vim.opt.mouse = ""
+    vim.notify("Mouse mode disabled", vim.log.levels.INFO)
+  end
+end, { desc = "Toggle mouse mode" })
