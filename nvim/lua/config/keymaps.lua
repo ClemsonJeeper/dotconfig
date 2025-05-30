@@ -56,6 +56,10 @@ mapkey("<leader>se", "<C-w>=", "n", { desc = "Make splits equal size" })
 mapkey("<leader>sx", "close<CR>", "n", { desc = "Close current split" })
 mapkey("<leader>sc", "close<CR>", "n", { desc = "Close current split" })
 
+-- Buffer Management
+mapkey("<S-H>", "bprev", "n", { desc = "Previous buffer"} )
+mapkey("<S-L>", "bnext", "n", { desc = "Next buffer"} )
+
 -- tab management
 mapkey("<leader>to", "tabnew<CR>", "n", { desc = "Open new tab" })
 mapkey("<leader>tx", "tabclose<CR>", "n", { desc = "Close current tab" })
