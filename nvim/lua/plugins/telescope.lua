@@ -34,7 +34,7 @@ return {
           hidden = true,
         },
         live_grep = {
-          file_ignore_patterns = { "node_modules", ".venv" },
+          file_ignore_patterns = { "node_modules", ".venv", ".svn" },
           additional_args = function(_)
             return { "--hidden", "--no-ignore-vcs" }
           end,

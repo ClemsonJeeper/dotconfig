@@ -919,23 +919,23 @@ virtual-mailboxes \
    "INBOX"     "notmuch://?query=tag:inbox and NOT tag:archive" \
    "Unread"    "notmuch://?query=tag:unread" \
    "Important"   "notmuch://?query=tag:starred" \
-   "Archive"   "notmuch://?query=tag:archive" \
+   "TODO"      "notmuch://?query=tag:todo" \
    "ui-hackers" "notmuch://?query=tag:ui-hackers" \
    "software-ui" "notmuch://?query=tag:software-ui" \
    "jira" "notmuch://?query=tag:jira" \
-   "2024" "notmuch://?query=date:2024" \
-   "2023" "notmuch://?query=date:2023" \
-   "2022" "notmuch://?query=date:2022" \
    "python-hackers" "notmuch://?query=tag:python-hackers" \
    "script-hackers" "notmuch://?query=tag:script-hackers" \
    "security-hackers" "notmuch://?query=tag:security-hackers" \
-   "TODO"      "notmuch://?query=tag:todo" \
-   "Sent"      "notmuch://?query=tag:sent"
+   "Archive"   "notmuch://?query=tag:archive" \
+   "2024" "notmuch://?query=date:2024" \
+   "2023" "notmuch://?query=date:2023" \
+   "2022" "notmuch://?query=date:2022" \
+   "Sent"      "notmuch://?query=tag:sent" \
 
 # colors
 
 color index brightred black '~Ystarred'
-color index brightblue black '~Ytodo'
+color index black green '~Ytodo'
 
 # notmuch bindings
 macro index / "<vfolder-from-query>"              # looks up a hand made query
