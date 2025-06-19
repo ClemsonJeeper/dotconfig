@@ -87,3 +87,14 @@ vim.keymap.set("n", "<leader>m", function()
     vim.notify("Mouse mode disabled", vim.log.levels.INFO)
   end
 end, { desc = "Toggle mouse mode" })
+
+-- Toggle sign column
+vim.keymap.set("n", "<leader>xs", function()
+  local current_signcolumn = vim.wo.signcolumn
+
+  if current_signcolumn == "auto" then
+    vim.wo.signcolumn = "no"
+  elseif current_signcolumn == "no" then
+    vim.wo.signcolumn = "auto"
+  end
+end, { desc = "Toggle sign column for LSP" })
