@@ -3,7 +3,6 @@ local mapkey = require("util.keymapper").mapvimkey
 mapkey("-", "<cmd>Oil --float<CR>", "n", { desc="Open Directory in Oil" })
 
 -- Various
-mapkey("<F5>", "CopilotChatToggle<CR>", "n");
 mapkey("<leader>/", "nohlsearch", "n")
 
 -- Whitespace
