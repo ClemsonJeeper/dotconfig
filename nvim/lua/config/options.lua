@@ -43,11 +43,11 @@ opt.splitright = true
 opt.splitbelow = true
 opt.autochdir = false
 opt.iskeyword:append("-")
-opt.mouse = ""
+opt.mouse = "nvi"
 --opt.mouse:append("a")
-opt.clipboard = ""
+--opt.clipboard = ""
 --opt.clipboard = "unnamed,unnamedplus"
---opt.clipboard:append("unnamedplus")
+opt.clipboard:append("unnamedplus")
 opt.modifiable = true
 opt.encoding = "UTF-8"
 opt.showmode = false
@@ -61,11 +61,11 @@ opt.showmode = false
 -- vim.api.nvim_set_hl(0, "NoiceCmdlinePopupBorder", { fg = "#658594", bg = "NONE" })
 
 -- Highlight what we yank briefly
-vim.api.nvim_create_autocmd("TextYankPost", {
-    group = vim.api.nvim_create_augroup("YangHighlight", { clear = true }),
-    pattern = "*",
-    callback = function()
-	vim.highlight.on_yank()
-    end,
-    desc = "Highlight yank",
-})
+-- vim.api.nvim_create_autocmd("TextYankPost", {
+--     group = vim.api.nvim_create_augroup("YangHighlight", { clear = true }),
+--     pattern = "*",
+--     callback = function()
+-- 	vim.highlight.on_yank()
+--     end,
+--     desc = "Highlight yank",
+-- })
