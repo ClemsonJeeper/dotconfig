@@ -70,6 +70,13 @@ mapkey("<leader>tf", "tabnew %<CR>", "n", { desc = "Open current buffer in new t
 vim.keymap.set("v", "<", "<gv", { silent = true, noremap = true })
 vim.keymap.set("v", ">", ">gv", { silent = true, noremap = true })
 
+vim.keymap.set("i", "<Select>", "<C-o>$", { noremap = true, silent = true })
+vim.keymap.set("n", "<Select>", "$", { noremap = true, silent = true })
+vim.keymap.set("v", "<Select>", "$", { noremap = true, silent = true })
+vim.keymap.set("i", "<Find>", "<C-o>^", { noremap = true, silent = true })
+vim.keymap.set("n", "<Find>", "^", { noremap = true, silent = true })
+vim.keymap.set("v", "<Find>", "^", { noremap = true, silent = true })
+
 local api = vim.api
 
 -- Commenting

@@ -47,7 +47,7 @@ opt.mouse = "nvi"
 --opt.mouse:append("a")
 --opt.clipboard = ""
 --opt.clipboard = "unnamed,unnamedplus"
-opt.clipboard:append("unnamedplus")
+--opt.clipboard:append("unnamedplus")
 opt.modifiable = true
 opt.encoding = "UTF-8"
 opt.showmode = false
