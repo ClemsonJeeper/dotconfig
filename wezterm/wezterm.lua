@@ -31,6 +31,8 @@ else
     config.font_size = 13
 end
 
+config.swallow_mouse_click_on_window_focus = true
+
 config.initial_cols = 190
 config.initial_rows = 56
 
