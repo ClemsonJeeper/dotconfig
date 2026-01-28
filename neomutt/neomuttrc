@@ -228,6 +228,7 @@ bind pager <up> previous-line
 bind pager <down> next-line
 bind pager <left> previous-entry
 bind pager <right> next-entry
+bind pager i exit
 
 # === Sidebar navigation ===
 bind index <left> sidebar-prev
