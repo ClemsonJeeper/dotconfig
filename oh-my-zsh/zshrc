@@ -6,6 +6,8 @@ ZSH_THEME="rjohnst"
 
 plugins=(
     dirhistory
+    fzf-tab
+    z
     zsh-history-substring-search
 )
 
