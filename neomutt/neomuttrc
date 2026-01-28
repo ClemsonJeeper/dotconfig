@@ -140,6 +140,20 @@ set sidebar_new_mail_only = no
 set sidebar_sort_method = "unsorted"
 set sidebar_component_depth = 1
 
+# === Mailcap Configuration ===
+set mailcap_path = ~/.config/neomutt/mailcap
+
+# Automatically view HTML emails
+auto_view text/html
+auto_view text/calendar
+auto_view application/ics
+
+# Prefer plain text over HTML
+alternative_order text/plain text/enriched text/html
+
+# Use mailcap entries for viewing attachments
+set implicit_autoview = yes
+
 # === Mailboxes configuration ===
 # Define these BEFORE sourcing account configs that change folder
 unmailboxes *
@@ -167,7 +181,7 @@ virtual-mailboxes \
 # === External configuration files ===
 # Enable true color support (must be set before color commands)
 #set color_directcolor = yes
-source ~/.config/neomutt/mailcap
+
 source ~/.config/neomutt/aliases
 
 # === Account configuration ===
