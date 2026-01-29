@@ -13,7 +13,8 @@ set message_cachedir = ~/.cache/neomutt/messages
 
 # === Editor ===
 set edit_headers = yes
-set editor="nvim %s"
+set editor="/homes/rjohnst/.config/neomutt/neomutt_editor.sh %s"
+#set editor="nvim %s"
 
 # === Sending mail ===
 set from = "rjohnst@juniper.net"

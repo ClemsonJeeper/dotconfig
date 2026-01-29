@@ -12,5 +12,10 @@ return {
     })
 
     vim.keymap.set("n", "<leader>cp", ":CopilotChatToggle<CR>", { desc = "Toggle Copilot Chat" })
+    vim.keymap.set("v", "<leader>ce", function()
+      local chat = require("CopilotChat")
+      local select = require("CopilotChat.select")
+      chat.ask("Please clean up this email, and make sure that you wrap all lines at 78 columns.", { selection = select.visual() })
+    end, { desc = "Clean up email with Copilot" })
   end,
 }
