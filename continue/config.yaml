@@ -1,0 +1,12 @@
+name: Local Config
+version: 1.0.0
+schema: v1
+models:
+  - name: Tankmoney GLM5
+    capabilities:
+      - chat
+      - edit
+    provider: openai
+    model: Unsloth-GLM-5-FP8
+    apiBase: "https://ai.tankmoney.com:450/v1"
+    apiKey: "not-needed"

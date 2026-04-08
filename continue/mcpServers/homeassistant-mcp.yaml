@@ -1,0 +1,11 @@
+name: Home Assistant mcpServer
+version: 0.0.1
+schema: v1
+mcpServers:
+  - name: Home Assistant
+    command: uvx
+    args:
+      - ha-mcp@latest
+    env:
+      HOMEASSISTANT_URL: "https://ha.clemsonjeep.com"
+      HOMEASSISTANT_TOKEN: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJkYzFhYjRmMmUxZGE0YTVmYTZmMjlkYzNmY2EyM2ZmZCIsImlhdCI6MTc3NTQyOTAwOSwiZXhwIjoyMDkwNzg5MDA5fQ.AhUt1MuyYZ8AIZl7Nd1ZQlUcAyw8BXhubiHv_fx9QiA"
