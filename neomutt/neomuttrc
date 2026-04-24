@@ -32,6 +32,7 @@ set quote_regexp="^( {0,5}[>|:%]| {0,5}[a-z0-9]+[>|]+)+"
 
 set reply_regexp="^((re(\\^[0-9])? ?:|a(nt)?w(ort)?:|wg:|\\(fwd\\))[ \t]*)*"
 set fast_reply = yes
+set recall = no
 set include = yes
 set forward_quote = yes
 set reverse_name = yes
@@ -89,7 +90,8 @@ set save_history = 100
 set history = 1000
 
 # === Address lookup ===
-set query_command = "mu cfind --format=mutt-ab '%s' 2>/dev/null | awk -F'\\t' '!seen[$1]++'"
+#set query_command = "mu cfind --format=mutt-ab '%s' 2>/dev/null | awk -F'\\t' '!seen[$1]++'"
+set query_command = "$HOME/bin/jnpr-hpe-email '%s'"
 set query_format = "%3c %t %-25.25n %-25.25a %?e?(%e)?"
 
 # === Display and formatting ===
@@ -159,11 +161,10 @@ set nm_default_uri="notmuch:///data/rjohnst/Maildir" # path to the maildir
 
 virtual-mailboxes \
    "INBOX" "notmuch://?query=tag:inbox and NOT tag:archive" \
-   "INBOX(RAW)" =inbox \
    "Unread" "notmuch://?query=tag:unread" \
    "Important" "notmuch://?query=tag:starred" \
    "TODO" "notmuch://?query=tag:todo" \
-   "ui-hackers" "notmuch://?query=tag:ui-hackers" \
+   "ui-hackers" "notmuch://?query=tag:ui-hackers and date:6M.." \
    "software-ui" "notmuch://?query=tag:software-ui" \
    "jira" "notmuch://?query=tag:jira" \
    "python-hackers" "notmuch://?query=tag:python-hackers" \
@@ -241,6 +242,7 @@ macro index - "<flag-message>"
 #macro index + "<flag-message><previous-entry><modify-labels>+starred<enter><sync-mailbox>"
 #macro index - "<modify-labels>-starred\n<sync-mailbox>"               # tag as unstarred
 macro index + "<modify-labels>!todo<enter>" "Toggle TODO"
+bind index <BackTab> previous-new-then-unread
 
 # === Attachment navigation ===
 bind attach n next-entry
