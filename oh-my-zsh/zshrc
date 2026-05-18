@@ -1,8 +1,9 @@
 ################################################################
 # begin oh-my-zsh
 export ZSH="$HOME/.oh-my-zsh"
-export DISABLE_UPDATE_PROMPT=true
+export DISABLE_AUTO_UPDATE=true
 
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=242"
 ZSH_THEME="rjohnst"
 
 plugins=(
@@ -17,6 +18,24 @@ source $ZSH/oh-my-zsh.sh
 
 bindkey '^[OA' history-substring-search-up
 bindkey '^[OB' history-substring-search-down
+
+zstyle ':completion:*' matcher-list ''
+
+bindkey '^[OA' history-substring-search-up
+bindkey '^[OB' history-substring-search-down
+
+backward-space-word() {
+    local WORDCHARS=''
+    zle backward-word
+}
+zle -N backward-space-word
+bindkey '^[[1;3D' backward-space-word
+forward-space-word() {
+    local WORDCHARS=''
+    zle forward-word
+}
+zle -N forward-space-word
+bindkey '^[[1;3C' forward-space-word
 
 # end oh-my-zsh
 ################################################################
